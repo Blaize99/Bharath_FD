@@ -23,7 +23,7 @@ class FAQ(models.Model):
     def get_translated_question(self, lang='en'):
         cache_key = f"BharathFD_{self.id}_{lang}" # Cache key is generated using the FAQ id and the language code.
         translated_question = cache.get(cache_key) # Retrieving translated question from the cache.
-
+        
         # If the translated question is not found in the cache, it is translated again and stored in the cache.
         if not translated_question:
             if lang == 'hi' and self.question_hi:
