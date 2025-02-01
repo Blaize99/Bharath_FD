@@ -135,5 +135,5 @@ git push origin main
 ---
 
 ## License
-MIT License
+Mozilla 
 
