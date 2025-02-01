@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.core.cache import cache
-from model import FAQ
+from .models import FAQ
 
 # Rest API to get list of FAQs in a specific language
 class FAQListView(APIView):

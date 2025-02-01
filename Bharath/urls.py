@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.http import HttpResponseRedirect
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('faq.urls')),  # Include the faq app's URLs
+    path('api/', include('faq.urls')),
+      
+    path('', lambda request: HttpResponseRedirect('/api/')),  # Include the faq app's URLs
 ]

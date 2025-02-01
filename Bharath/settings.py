@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'ckeditor',
-    'django_redis'
+    'django_redis',
+    'faq' # New app added
 ]
 
 MIDDLEWARE = [
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'Bharath.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
 }
